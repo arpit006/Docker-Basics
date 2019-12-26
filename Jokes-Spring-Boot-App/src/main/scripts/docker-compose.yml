@@ -1,0 +1,16 @@
+# To start the app in docker in one go just type docker-compose up -d 
+version: '3'
+
+services:
+  jokesappservice:
+    image: iarpitsrivastava06/jokes-app:1
+    ports:
+      - "8543:8080"
+    restart: always
+    #    depends_on:
+    #    environment:
+    healthcheck:
+      test: ["CMD","curl", "-f", "http://localhost:8543"]
+      interval: 1m30s
+      timeout: 10s
+      retries: 3
