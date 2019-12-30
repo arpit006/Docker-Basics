@@ -13,3 +13,14 @@ GET http://localhost:8282/smallapp/1
 Content-Type: application/json
 
 ###
+
+POST http://localhost:8282/smallapp
+Content-Type: application/json
+
+{
+  "id": 2,
+  "name": "Shivam",
+  "age": 24
+}
+
+###

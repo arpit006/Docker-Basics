@@ -2,20 +2,26 @@ version: '3'
 
 services:
   sqlserverdb:
-    image: microsoft/mssql-server-linux:latest
+    image: mcmoe/mssqldocker:latest
+    container_name: 'mcmoe-sqlserver'
     ports:
       - "1433:1433"
     environment:
       ACCEPT_EULA: Y
       SA_PASSWORD: HEllo@123
-      MSSQL_DB: smallApp01
+      MSSQL_DB: smallApp
+      MSSQL_USER: SA
+      MSSQL_PASSWORD: HEllo@123
+    volumes:
+      - /Users/arpitsrivastava/docker-data/smallApp:/docker-entrypoint-initdb.d
     restart: always
   smallAppService:
     image: iarpitsrivastava06/small-app:1
+    container_name: small-app-docker
     ports:
       - "8282:8282"
     restart: always
     depends_on:
       - sqlserverdb
     environment:
-      SPRING_DATASOURCE_URL: jdbc:sqlserver://sqlserverdb:1433;databaseName=smallApp01
+      SPRING_DATASOURCE_URL: jdbc:sqlserver://sqlserverdb:1433;databaseName=smallApp
