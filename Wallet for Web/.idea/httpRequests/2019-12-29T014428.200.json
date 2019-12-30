@@ -1,0 +1,10 @@
+{
+  "id": 1,
+  "firstName": "Arpit",
+  "lastName": "Srivastava",
+  "age": 23,
+  "email": "abc@xyz.com",
+  "balance": 1123.0,
+  "password": "abcdef",
+  "mobileNumber": 1
+}

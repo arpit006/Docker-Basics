@@ -1,0 +1,15 @@
+POST http://localhost:8282/smallapp
+Content-Type: application/json
+
+{
+  "id": 1,
+  "name": "Arpit",
+  "age": 22
+  }
+
+###
+
+GET http://localhost:8282/smallapp/1
+Content-Type: application/json
+
+###

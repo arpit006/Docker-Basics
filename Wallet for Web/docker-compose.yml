@@ -1,0 +1,31 @@
+#sqlserver:
+#    container_name: 'sqlserver'
+#    image: microsoft/mssql-server-linux:2017-CU1
+#    environment:
+#      - ACCEPT_EULA=Y
+#      - MSSQL_PID=Developer
+#      - SA_PASSWORD=<pwd>
+#      - MSSQL_DB=mydb (was expected db to be created)
+#      - MSSQL_USER=me
+#      - MSSQL_PASSWORD=<pwd>
+#    ports:
+#      - "1433:1433"
+#    networks:
+#      - app-network
+
+#version: '3'
+#
+#services:
+#  db:
+#    image: microsoft/mssql-server-linux:latest
+#    ports:
+#      - "8102:8080"
+#    restart: always
+#    environment:
+#      - ACCEPT_EULA=Y
+#      - SA_PASSWORD=HEllo@123
+#      - MSSQL_DB=wallet
+#  ewalletservice:
+#    image:
+
+

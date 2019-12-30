@@ -1,4 +1,4 @@
-# To start the app in docker in one go just type docker-compose up -d 
+# To start the app in docker in one go just type docker-compose up -d
 version: '3'
 
 services:

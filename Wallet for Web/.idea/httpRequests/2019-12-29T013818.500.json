@@ -1,0 +1,7 @@
+{
+  "timestamp": 1577563698437,
+  "status": 500,
+  "error": "Internal Server Error",
+  "message": "Could not commit JPA transaction; nested exception is javax.persistence.RollbackException: Error while committing the transaction",
+  "path": "/person"
+}

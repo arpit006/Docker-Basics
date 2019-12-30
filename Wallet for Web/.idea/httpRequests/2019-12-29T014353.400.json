@@ -1,0 +1,7 @@
+{
+  "timestamp": 1577564033482,
+  "status": 400,
+  "error": "Bad Request",
+  "message": "Required long parameter 'mobileNumber' is not present",
+  "path": "/person/addMoney"
+}

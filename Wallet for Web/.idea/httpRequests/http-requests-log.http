@@ -1,0 +1,50 @@
+PUT http://localhost:8080/person/addMoney?amount=1000&mobileNumber=1
+Content-Type: application/json
+
+<> 2019-12-29T014428.200.json
+
+###
+
+PUT http://localhost:8080/person/addMoney?amount=1000&mobileNumer=1
+Content-Type: application/json
+
+<> 2019-12-29T014353.400.json
+
+###
+
+POST http://localhost:8080/person
+Content-Type: application/json
+
+{
+  "id": 1,
+  "firstName": "Arpit",
+  "lastName": "Srivastava",
+  "age": 23,
+  "email": "abc@xyz.com",
+  "balance": 123.00,
+  "password": "abcdef",
+  "mobileNumber": 1
+  }
+
+<> 2019-12-29T013913.200.json
+
+###
+
+POST http://localhost:8080/person
+Content-Type: application/json
+
+{
+  "id": 1,
+  "firstName": "Arpit",
+  "lastName": "Srivastava",
+  "age": 23,
+  "email": "abc@xyz.com",
+  "balance": 123.00,
+  "password": "abc",
+  "mobileNumber": 1
+  }
+
+<> 2019-12-29T013818.500.json
+
+###
+

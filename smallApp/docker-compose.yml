@@ -1,0 +1,21 @@
+version: '3'
+
+services:
+  sqlserverdb:
+    image: microsoft/mssql-server-linux:latest
+    ports:
+      - "1433:1433"
+    environment:
+      ACCEPT_EULA: Y
+      SA_PASSWORD: HEllo@123
+      MSSQL_DB: smallApp01
+    restart: always
+  smallAppService:
+    image: iarpitsrivastava06/small-app:1
+    ports:
+      - "8282:8282"
+    restart: always
+    depends_on:
+      - sqlserverdb
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:sqlserver://sqlserverdb:1433;databaseName=smallApp01
