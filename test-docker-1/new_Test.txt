@@ -1,0 +1,3 @@
+
+This is just a temporary test file to check how the ADD and COPY works after
+going inside the container and inspecting.
