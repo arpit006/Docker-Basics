@@ -1,12 +1,12 @@
 apiVersion: v1
 kind: Pod
-metadata:
-  name: myapp-pod
+metadata: 
+  name: jokes-pod
   labels:
-    app: my-app
-    type: jokes
+    app: my_jokes-app
+    type: jokes-pod
 spec:
   containers:
-    - name: jokes-kn-container
-      image: iarpitsrivastava06/jokes-kubernetes-test:v3      
-               
+  - name: jokes-kn-cn
+    image: iarpitsrivastava06/jokes-kubernetes-test:v2    
+

@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-jokes-deployment
+  labels:
+    app: my_jokes_deployment
+    type: jokes-app
+spec:
+  template:
+    metadata:
+      name: my-jokes-pod
+      labels:
+        app: my_jokes_pod
+        type: jokes-app
+    spec:
+      containers:
+        - name: jokes-kn-cn
+          image: iarpitsrivastava06/jokes-kubernetes-test:v3
+  replicas: 4
+  selector:
+    matchLabels: 
+      type: jokes-app                

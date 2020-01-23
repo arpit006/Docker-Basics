@@ -1,0 +1,24 @@
+--- 
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata: 
+  labels: 
+    app: my_jokes_app_rs
+    type: jokes-app
+  name: my-jokes-rs
+spec: 
+  replicas: 6
+  selector: 
+    matchLabels: 
+      type: jokes-app
+  template: 
+    metadata: 
+      labels: 
+        app: my_jokes_app_pod
+        type: jokes-app
+      name: my-jokes-pod
+    spec: 
+      containers: 
+        - 
+          image: "iarpitsrivastava06/jokes-kubernetes-test:v2"
+          name: jokes-kn-cn
